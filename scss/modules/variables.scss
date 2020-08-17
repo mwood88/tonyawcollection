@@ -1,0 +1,36 @@
+/**********************************************************
+*   @COLORS
+***********************************************************/
+$black: #232323;
+$darkblue: #203348;
+$mediumblue: #3d5273;
+$lightblue: #84afd3;
+$gray: #c3d0d1;
+$white: #FFFFFF;
+
+
+
+/**********************************************************
+*   @MEDIA QUERIES
+***********************************************************/
+$mobile-width: 767px;
+$tablet-width: 1024px;
+$desktop-width: 1025px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}

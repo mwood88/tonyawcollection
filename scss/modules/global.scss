@@ -1,0 +1,338 @@
+/**********************************************************
+*   @GLOBAL
+***********************************************************/
+/* HIGHLIGHT COLOR */
+::selection {
+	background: $darkblue;
+	color: $white;
+}
+
+::-moz-selection {
+ background: $darkblue;
+ color: $white;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+body {
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	font-weight: $regular;
+	color: $black;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: $white;
+}
+
+
+/**********************************************************
+*   @MASTHEAD
+***********************************************************/
+.masthead {
+	background: $white;
+	width: 100%;
+	height: 100px;
+	padding: 10px 0;
+	box-shadow: 10px 10px 20px 3px rgba(0,0,0,0.1);
+	position: absolute;
+	z-index: 99;
+
+	//keller williams logo
+	.kw-wrapper {
+		padding-top: 20px;
+
+		.kw-logo {
+			height: 40px;
+		}
+	}
+
+	//tonyaw logo
+	.tw-wrapper {
+		text-align: center;
+
+		.tw-logo {
+			height: 75px;
+		}
+
+		@include mobile {
+			text-align: right;
+		}
+	}
+
+	//contact btn
+	.btn-wrapper {
+		text-align: right;
+		padding-top: 20px;
+
+		@include mobile {
+			display: none;
+		}
+	}
+}
+
+
+/**********************************************************
+*   @HERO
+***********************************************************/
+.hero {
+	position: relative;
+	background: $darkblue url('../img/hero-bg.jpg') center center;
+	background-size: cover;
+	padding: 400px 0 300px;
+	overflow: hidden;
+
+	@include mobile {
+		padding: 220px 0 100px;
+	}
+
+	.logo-bg {
+		position: absolute;
+		top: 20%;
+		width: 100%;
+		mix-blend-mode: overlay;
+		opacity: .2;
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	.heading {
+		color: $white;
+		font-weight: bold;
+		font-size: 90px;
+		line-height: 90px;
+		position: relative;
+
+		@include mobile {
+			font-size: 40px;
+			line-height: 45px;
+
+			br { display: none; }
+		}
+	}
+
+	.btn {
+		margin-top: 40px;
+		display: none;
+
+		@include mobile {
+			display: block;
+		}
+	}
+
+	#message-sent {
+		position: absolute;
+		top: 120px;
+		width: 100%;
+		z-index: 99;
+	}
+}
+
+
+/**********************************************************
+*   @ABOUT
+***********************************************************/
+.about {
+	padding: 100px 0;
+	background: $gray;
+
+	.heading {
+		color: $white;
+		font-size: 30px;
+		line-height: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+
+		span { font-size: 1.2em; }
+
+		@include mobile {
+			font-size: 24px;
+			line-height: 24px;
+			text-align: center;
+		}
+	}
+
+	.heading-lg {
+		color: $darkblue;
+		font-size: 50px;
+		line-height: 50px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+
+		span { font-size: 1.2em; }
+
+		@include mobile {
+			font-size: 40px;
+			line-height: 40px;
+			text-align: center;
+		}
+	}
+
+	.about-img {
+		text-align: center;
+
+		.tonya-img {
+			width: 60%;
+			box-shadow: 10px 10px 20px 3px rgba(0,0,0,0.15);
+
+			@include mobile {
+				margin-bottom: 70px;
+			}
+		}
+	}
+}
+
+
+/**********************************************************
+*   @COLLECTION
+***********************************************************/
+.collection {
+
+	.collection-info {
+		background: $mediumblue;
+		color: $white;
+		padding: 120px 40px 120px 15%;
+
+		@include tablet {
+			padding-left: 40px;
+		}
+
+		@include mobile {
+			padding: 60px 15px;
+		}
+
+		.btn {
+			margin-top: 30px;
+
+			@include tablet {
+				display: block;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+	.collection-img {
+		background: url('../img/house-bg.jpg') center center;
+		background-size: cover;
+
+		@include mobile {
+			height: 300px;
+		}
+	}
+}
+
+
+/**********************************************************
+*   @CONTACT
+***********************************************************/
+.contact {
+	padding: 100px 0 0;
+
+	.heading {
+		color: $gray;
+		font-size: 30px;
+		line-height: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+
+		span { font-size: 1.2em; }
+
+		@include mobile {
+			font-size: 24px;
+			line-height: 24px;
+		}
+	}
+
+	.heading-lg {
+		color: $darkblue;
+		font-size: 50px;
+		line-height: 50px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 50px;
+
+		span { font-size: 1.2em; }
+
+		@include mobile {
+			font-size: 40px;
+			line-height: 40px;
+		}
+	}
+
+	p {
+		margin-bottom: 30px;
+	}
+
+	.details {
+		div {
+			margin-bottom: 5px;
+			padding-bottom: 5px;
+			font-size: 1.1em;
+			border-bottom: 1px dotted rgba($gray, .5);
+		}
+
+		.icon {
+			color: $mediumblue;
+			margin-right: 10px;
+		}
+
+		@include mobile {
+			margin-bottom: 60px;
+		}
+	}
+
+	.btn {
+		@include tablet {
+			display: block;
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.contact-house {
+		width: 100%;
+		margin-top: 40px;
+	}
+}
+
+
+/**********************************************************
+*   @FOOTER
+***********************************************************/
+.footer {
+	background: $darkblue;
+	padding: 100px 0 70px;
+	color: $white;
+
+	.logo {
+		height: 120px;
+		margin-bottom: 50px;
+	}
+}
+
+

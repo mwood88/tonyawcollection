@@ -1,0 +1,31 @@
+/**********************************************************
+*   @TYPOGRAPHY
+***********************************************************/
+
+// Font weights
+$regular: 400;
+$bold: 600;
+$extrabold: 700;
+
+// Base Font
+$base-font-family: 'TonyaWSerif';
+$base-font-weight: $regular;
+$base-font-size: 16px;
+$base-line-height: 1.4;
+
+
+@font-face {
+    font-family: 'TonyaWSerif';
+    src: url('../fonts/DanmarkURWT-Bold.woff2') format('woff2'),
+        url('../fonts/DanmarkURWT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TonyaWSerif';
+    src: url('../fonts/DanmarkURWT-Medi.woff2') format('woff2'),
+        url('../fonts/DanmarkURWT-Medi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

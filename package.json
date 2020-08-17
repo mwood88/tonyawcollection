@@ -1,0 +1,21 @@
+{
+  "name": "tonyawcollection",
+  "version": "1.0.0",
+  "description": "real estate landing page",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css",
+    "build-css": "node-sass scss/main.scss css/main.css --output-style compressed"
+  },
+  "author": "Matthew Wood",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "node-sass": "^4.13.0",
+    "scss": "^0.2.4"
+  }
+}
